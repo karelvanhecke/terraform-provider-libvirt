@@ -142,7 +142,7 @@ jobs:
         env:
           TF_ACC: "1"
           TF_PROVIDER_LIBVIRT_DOMAIN_TYPE: "qemu"
-          TF_ACC_PROVIDER_NAMESPACE: "dmacvicar"
+          TF_ACC_PROVIDER_NAMESPACE: "karelvanhecke"
           TF_ACC_PROVIDER_HOST: "registry.terraform.io"
         run: |
           # Get absolute path to terraform/tofu binary
