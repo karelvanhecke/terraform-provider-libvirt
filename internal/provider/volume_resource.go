@@ -357,7 +357,7 @@ func (r *VolumeResource) Create(ctx context.Context, req resource.CreateRequest,
 			"bytes": uploadCapacity,
 		})
 
-		if !model.Capacity.IsNull() {
+		if !model.Capacity.IsNull() && !model.Capacity.IsUnknown() {
 			errSummary := "Volume resize after upload failed"
 			_, uploadedCapacity, _, err := r.client.Libvirt().StorageVolGetInfo(volume)
 			if err != nil {
